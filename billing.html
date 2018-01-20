@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="JS/fdb-all.js"></script>
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.js"></script>
+	<script type="text/javascript" src="JS/billing.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>JSA Final</title>
+</head>
+<body>
+	<h1 align="center">新增支出</h1>
+	<p>日期</p>
+	<input type="date" class="date" id="edtDate">
+	<p>類別</p>
+	<select class="form-control" id="edtCategory">
+		<option>餐飲</option>
+    	<option>交通</option>
+	    <option>娛樂</option>
+	    <option>生活用品</option>
+	</select>
+	<p>項目</p>
+	<input type="text" id="edtItem">
+	<p>金額</p>
+	<input type="text" value="70" id="edtAmount">
+	<input type="button" value="Submit" class="btn btn-primary" id="btnSubmit">
+</body>
+</html>
