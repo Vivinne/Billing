@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="JS/fdb-all.js"></script>
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.js"></script>
+	<script type="text/javascript" src="JS/pastExpenses.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>查詢過往資料</title>
+</head>
+<body>
+	<h1>查詢過往資料</h1>
+
+	<p><input type="radio" value="thisMonth" name="choice" checked="true">本月份</p>
+	<p><input type="radio" value="period" name="choice">指定期間</p>
+	
+	<p><input type="date" class="date" id="dateFirst" readonly="true"> ~ <input type="date" class="date" id="dateLast" readonly="true"></p>
+	
+	<button class="btn btn-primary" id="btnSearch">查詢</button>
+	
+	<hr>
+	<h2>分類統計</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr class="success"> 
+				<td>類別</td>
+				<td>金額</td>
+				<td>比例</td>
+			</tr>
+		</thead>
+		<tbody id="category-tbody">
+
+		</tbody>
+	</table>
+	<p id="txtSum">總額: </p>
+
+	<hr>
+	<h2>支出細項</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr class="success"> 
+				<td>日期</td>
+				<td>項目</td>
+				<td>金額</td>
+			</tr>
+		</thead>
+		<tbody id="detail-tbody">
+
+		</tbody>
+	</table>
+</body>
+</html>
