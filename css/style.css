@@ -1,0 +1,20 @@
+body{
+	font-family:微軟正黑體;
+	background-color:#000000;
+}
+
+h1{
+	color:	#E0FFFF;
+}
+
+button{
+	width:100%;
+}
+
+p{
+	color:#FFB3FF;
+}
+
+.success{
+	color: #8C0044;
+}

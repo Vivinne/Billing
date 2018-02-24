@@ -80,33 +80,34 @@ function updateCategoryTable(datas) {
 	var sumCategory = [0, 0, 0, 0];
 	var category = ["餐飲", "交通", "娛樂", "生活用品"];
 
-for (var i = 0; i < datas.length; i++) {
-	switch(datas[i].category){
-		case category[0] :
-		sumCategory[0] += datas[i].amount*1;
-		break;
-		case category[1] :
-		sumCategory[1] += datas[i].amount*1;
-		break;
-		case category[2] :
-		sumCategory[2] += datas[i].amount*1;
-		break;
-		case category[3] :
-		sumCategory[3] += datas[i].amount*1;
-		break;
+	for (var i = 0; i < datas.length; i++) {
+		switch(datas[i].category){
+			case category[0] :
+			sumCategory[0] += datas[i].amount*1;
+			break;
+			case category[1] :
+			sumCategory[1] += datas[i].amount*1;
+			break;
+			case category[2] :
+			sumCategory[2] += datas[i].amount*1;
+			break;
+			case category[3] :
+			sumCategory[3] += datas[i].amount*1;
+			break;
+		}
+		sum += datas[i].amount*1;
+		console.log(sum);
 	}
-	sum += datas[i].amount*1;
-}
 
-for(var i = 0; i < category.length; i++){
+	for(var i = 0; i < category.length; i++){
 		$("#category-tbody").append(
 			"<tr>" +
 			"<td>" + category[i] + "</td>" +
 			"<td>" + sumCategory[i] + "</td>" +
-			"<td>" + Math.round((sumCategory/sum)*100) + "%</td>" +
+			"<td>" + Math.round((sumCategory[i]/sum)*100) + "%</td>" +
 			"</tr>"
 			);
-		$("txtSum").text("總額：$" + sum);
+		$("#txtSum").text("總額：$" + sum);
 	}
 }
 
